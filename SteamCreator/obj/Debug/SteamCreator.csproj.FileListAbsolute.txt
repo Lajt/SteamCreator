@@ -1,0 +1,9 @@
+c:\users\lajt\documents\visual studio 2015\Projects\SteamCreator\SteamCreator\bin\Debug\SteamCreator.exe
+c:\users\lajt\documents\visual studio 2015\Projects\SteamCreator\SteamCreator\bin\Debug\SteamCreator.pdb
+c:\users\lajt\documents\visual studio 2015\Projects\SteamCreator\SteamCreator\obj\Debug\SteamCreator.csprojResolveAssemblyReference.cache
+c:\users\lajt\documents\visual studio 2015\Projects\SteamCreator\SteamCreator\obj\Debug\SteamCreator.exe
+c:\users\lajt\documents\visual studio 2015\Projects\SteamCreator\SteamCreator\obj\Debug\SteamCreator.pdb
+c:\users\lajt\documents\visual studio 2015\Projects\SteamCreator\SteamCreator\bin\Debug\SteamCreator.exe.config
+C:\Users\Lajt\Documents\Visual Studio 2015\Projects\SteamCreator\SteamCreator\bin\Debug\Ionic.Zip.dll
+C:\Users\Lajt\Documents\Visual Studio 2015\Projects\SteamCreator\SteamCreator\bin\Debug\Ionic.Zip.xml
+C:\Users\Lajt\Documents\Visual Studio 2015\Projects\SteamCreator\SteamCreator\bin\Debug\PasswordUtility.dll

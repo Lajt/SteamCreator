@@ -1,0 +1,7 @@
+<LoadConfig>
+  <SteamPath>C:\Program Files (x86)\Steam\</SteamPath>
+  <SavePath>data\</SavePath>
+  <ImagePath>img\</ImagePath>
+  <UsernamesPath>db\lower_polish.txt</UsernamesPath>
+  <CheckTime>5000</CheckTime>
+</LoadConfig>
