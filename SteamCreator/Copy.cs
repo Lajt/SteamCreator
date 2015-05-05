@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using Ionic.Zip;
 
@@ -39,11 +40,18 @@ namespace SteamCreator
                     string[] fileStrings = file.Split('\\');
                     string fileName = fileStrings[fileStrings.Length - 1];
                     if (!fileName.Contains(".vdf"))
-                        File.Copy(file, fullPath + "\\" + fileName);
+                        File.Move(file, fullPath + "\\" + fileName);
                     else
-                        File.Copy(file, fullPath + "\\config\\" + fileName);
+                        File.Move(file, fullPath + "\\config\\" + fileName);
 
                 }
+        }
+
+        public static void saveCoordinates(string username, string password)
+        {
+            string path = SavePath + "\\" + username + "\\";
+            string[] lines = { "Username:\t" + username, "Password:\t" + password, "Mail address:\t" + username + "@niepodam.pl", "Go to " + username + ".niepodam.pl to receive your mails no need for password" };
+            System.IO.File.WriteAllLines(path+"account.txt", lines);
         }
 
         public static void ZipFiles(string name)
@@ -52,6 +60,8 @@ namespace SteamCreator
             using (ZipFile zip = new ZipFile())
             {
                 zip.AddSelectedFiles("ssfn*",tempDir,"steam");
+                zip.AddSelectedFiles("*.png", tempDir, "steam");
+                zip.AddSelectedFiles("*.txt", tempDir, "steam");
                 zip.AddSelectedFiles("*.vdf",tempDir+"\\config","config");
                 zip.Save(SavePath+"\\"+name+".zip");
             }

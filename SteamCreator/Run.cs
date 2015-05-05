@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 
 namespace SteamCreator
 {
@@ -35,17 +36,15 @@ namespace SteamCreator
         public static void RestartProcess(string name = "Steam", string path = "Steam")
         {
             KillPrcess(path);
+            //Thread.Sleep(2000);
             StartProcess(name);
         }
 
         public static bool IsAlive(string name = "Steam")
         {
             Process[] processes = Process.GetProcessesByName(name);
-            foreach (var process in processes)
-            {
-                Console.WriteLine(process.MainWindowTitle);
-            }
-            Console.ReadLine();
+            if(processes.Length > 0)
+                Console.WriteLine(processes[0].MainWindowTitle);
             return processes.Length > 0;
         }
 
@@ -60,6 +59,7 @@ namespace SteamCreator
         public static void ShowWindow(string name = "Steam")
         {
             Process[] processes = Process.GetProcessesByName(name);
+            Console.WriteLine(processes[0].MainWindowTitle);
             SetForegroundWindow(processes[0].MainWindowHandle);
 
         }
